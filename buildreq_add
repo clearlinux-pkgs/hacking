@@ -1,0 +1,26 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+six
+mccabe
+flake8
+pyflakes
+pep8
+eventlet
+testtools
+testscenarios
+testrepository
+oslosphinx
+Sphinx
+python-subunit-python
+python-mock
+fixtures
+discover
+coverage
+greenlet
+traceback2
+unittest2
+python-mimeparse
+extras
+Pygments
+docutils
+Jinja2

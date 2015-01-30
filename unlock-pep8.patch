@@ -1,0 +1,18 @@
+Index: hacking-0.10.1/requirements.txt
+===================================================================
+--- hacking-0.10.1.orig/requirements.txt	2015-01-30 14:16:14.000000000 -0800
++++ hacking-0.10.1/requirements.txt	2015-04-08 12:35:56.053908931 -0700
+@@ -3,9 +3,9 @@
+ # process, which may cause wedges in the gate later.
+ pbr>=0.6,!=0.7,<1.0
+ 
+-pep8==1.5.7
+-pyflakes==0.8.1
+-flake8==2.2.4
+-mccabe==0.2.1 # MIT License
++pep8
++pyflakes
++flake8
++mccabe
+ 
+ six>=1.7.0
