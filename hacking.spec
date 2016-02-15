@@ -4,7 +4,7 @@
 #
 Name     : hacking
 Version  : 0.10.2
-Release  : 12
+Release  : 13
 URL      : http://tarballs.openstack.org/hacking/hacking-0.10.2.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-0.10.2.tar.gz
 Summary  : OpenStack Hacking Guideline Enforcement
