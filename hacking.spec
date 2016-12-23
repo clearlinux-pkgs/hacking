@@ -4,13 +4,14 @@
 #
 Name     : hacking
 Version  : 0.11.0
-Release  : 21
+Release  : 22
 URL      : http://tarballs.openstack.org/hacking/hacking-0.11.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-0.11.0.tar.gz
 Summary  : OpenStack Hacking Guideline Enforcement
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: hacking-python
+BuildRequires : Babel
 BuildRequires : Jinja2
 BuildRequires : Pygments
 BuildRequires : Sphinx
@@ -24,6 +25,7 @@ BuildRequires : extras
 BuildRequires : fixtures
 BuildRequires : flake8
 BuildRequires : greenlet
+BuildRequires : imagesize-python
 BuildRequires : mccabe
 BuildRequires : oslosphinx
 BuildRequires : pbr
@@ -38,6 +40,7 @@ BuildRequires : python-mimeparse
 BuildRequires : python-mock
 BuildRequires : python-subunit-python
 BuildRequires : python3-dev
+BuildRequires : pytz-python
 BuildRequires : setuptools
 BuildRequires : six
 BuildRequires : testrepository
