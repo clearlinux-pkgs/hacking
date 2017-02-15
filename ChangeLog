@@ -1,6 +1,33 @@
 CHANGES
 =======
 
+0.13.0
+------
+
+* local-check-factory CLI option
+
+0.12.0
+------
+
+* Enable release notes translation
+* Updated from global requirements
+* Updated from global requirements
+* Fix issues detected by pycodestyle
+* Add documentation about off-by-default options
+* Add optional H203 to check that assertIs(Not)None is used
+* Updated from global requirements
+* Add a check for delayed string interpolation
+* Fix releasenote building
+* Clean up check signatures
+* Fix Google Python Style Guide link
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix H703 test
+* Updated from global requirements
+* Updated from global requirements
+* Add reno and release notes tracking
+
 0.11.0
 ------
 
@@ -20,6 +47,7 @@ CHANGES
 * Minor text cleanup
 * Deprecated tox -downloadcache option removed
 * Updated from global requirements
+* Add support for PEP257
 * Update docs for i18n exception
 * Updated from global requirements
 * Updated from global requirements
