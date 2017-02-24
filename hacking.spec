@@ -6,7 +6,7 @@
 #
 Name     : hacking
 Version  : 0.13.0
-Release  : 26
+Release  : 27
 URL      : http://tarballs.openstack.org/hacking/hacking-0.13.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-0.13.0.tar.gz
 Source99 : http://tarballs.openstack.org/hacking/hacking-0.13.0.tar.gz.asc
@@ -60,6 +60,7 @@ BuildRequires : tox
 BuildRequires : traceback2
 BuildRequires : unittest2
 BuildRequires : virtualenv
+Patch1: requires.patch
 
 %description
 Introduction
@@ -76,10 +77,11 @@ python components for the hacking package.
 
 %prep
 %setup -q -n hacking-0.13.0
+%patch1 -p1
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487947456
+export SOURCE_DATE_EPOCH=1487948460
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -89,7 +91,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1487947456
+export SOURCE_DATE_EPOCH=1487948460
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
