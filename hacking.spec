@@ -6,7 +6,7 @@
 #
 Name     : hacking
 Version  : 0.13.0
-Release  : 28
+Release  : 29
 URL      : http://tarballs.openstack.org/hacking/hacking-0.13.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-0.13.0.tar.gz
 Source99 : http://tarballs.openstack.org/hacking/hacking-0.13.0.tar.gz.asc
@@ -21,41 +21,16 @@ Requires: pbr
 Requires: pep8
 Requires: pyflakes
 Requires: six
-BuildRequires : Babel
-BuildRequires : Jinja2
-BuildRequires : Pygments
-BuildRequires : Sphinx
 BuildRequires : configparser-python
-BuildRequires : coverage
-BuildRequires : discover
-BuildRequires : docutils
-BuildRequires : eventlet
-BuildRequires : extras
-BuildRequires : fixtures
-BuildRequires : flake8
-BuildRequires : greenlet
-BuildRequires : mccabe
-BuildRequires : oslosphinx
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
-BuildRequires : pyflakes
 BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-mimeparse
-BuildRequires : python-mock
-BuildRequires : python-subunit-python
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : testrepository
-BuildRequires : testscenarios
-BuildRequires : testtools
 BuildRequires : tox
-BuildRequires : traceback2
-BuildRequires : unittest2
 BuildRequires : virtualenv
 Patch1: requires.patch
 
@@ -78,7 +53,7 @@ python components for the hacking package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489025537
+export SOURCE_DATE_EPOCH=1489281276
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -88,7 +63,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1489025537
+export SOURCE_DATE_EPOCH=1489281276
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
