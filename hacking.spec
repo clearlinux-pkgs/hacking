@@ -6,7 +6,7 @@
 #
 Name     : hacking
 Version  : 1.1.0
-Release  : 34
+Release  : 35
 URL      : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source99 : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz.asc
@@ -41,6 +41,7 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : tox
 BuildRequires : virtualenv
+Patch1: reqs.patch
 
 %description
 ============
@@ -73,13 +74,14 @@ python3 components for the hacking package.
 
 %prep
 %setup -q -n hacking-1.1.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532444407
+export SOURCE_DATE_EPOCH=1532452537
 python3 setup.py build -b py3
 
 %check

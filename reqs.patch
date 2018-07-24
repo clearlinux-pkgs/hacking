@@ -1,0 +1,18 @@
+--- hacking-1.1.0/requirements.txt~	2018-05-08 13:17:08.000000000 +0000
++++ hacking-1.1.0/requirements.txt	2018-07-24 17:14:26.270140546 +0000
+@@ -3,5 +3,5 @@
+ # process, which may cause wedges in the gate later.
+ pbr!=2.1.0,>=2.0.0 # Apache-2.0
+ 
+-flake8<2.7.0,>=2.6.0 # MIT
++flake8
+ six>=1.10.0 # MIT
+--- hacking-1.1.0/hacking.egg-info/requires.txt~	2018-05-08 13:20:44.000000000 +0000
++++ hacking-1.1.0/hacking.egg-info/requires.txt	2018-07-24 17:14:40.379140350 +0000
+@@ -1,5 +1,5 @@
+ pbr!=2.1.0,>=2.0.0
+-flake8<2.7.0,>=2.6.0
++flake8
+ six>=1.10.0
+ 
+ [pep257]
