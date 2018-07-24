@@ -6,7 +6,7 @@
 #
 Name     : hacking
 Version  : 1.1.0
-Release  : 32
+Release  : 33
 URL      : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source99 : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz.asc
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532310681
+export SOURCE_DATE_EPOCH=1532444407
 python3 setup.py build -b py3
 
 %check
