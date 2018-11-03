@@ -6,39 +6,25 @@
 #
 Name     : hacking
 Version  : 1.1.0
-Release  : 35
+Release  : 36
 URL      : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source99 : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz.asc
 Summary  : OpenStack Hacking Guideline Enforcement
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: hacking-python3
-Requires: hacking-license
-Requires: hacking-python
-Requires: Sphinx
-Requires: coverage
-Requires: eventlet
-Requires: fixtures
+Requires: hacking-license = %{version}-%{release}
+Requires: hacking-python = %{version}-%{release}
+Requires: hacking-python3 = %{version}-%{release}
 Requires: flake8
 Requires: flake8-docstrings
-Requires: openstackdocstheme
 Requires: pbr
-Requires: python-mock
-Requires: python-subunit
-Requires: reno
 Requires: six
-Requires: testrepository
-Requires: testscenarios
-Requires: testtools
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
-BuildRequires : python3-dev
-BuildRequires : setuptools
 BuildRequires : tox
 BuildRequires : virtualenv
 Patch1: reqs.patch
@@ -57,7 +43,7 @@ license components for the hacking package.
 %package python
 Summary: python components for the hacking package.
 Group: Default
-Requires: hacking-python3
+Requires: hacking-python3 = %{version}-%{release}
 
 %description python
 python components for the hacking package.
@@ -81,8 +67,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532452537
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541266449
+python3 setup.py build
 
 %check
 export http_proxy=http://127.0.0.1:9/
@@ -91,9 +77,9 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test || :
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/hacking
-cp LICENSE %{buildroot}/usr/share/doc/hacking/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/hacking
+cp LICENSE %{buildroot}/usr/share/package-licenses/hacking/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -102,8 +88,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/hacking/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/hacking/LICENSE
 
 %files python
 %defattr(-,root,root,-)
