@@ -6,7 +6,7 @@
 #
 Name     : hacking
 Version  : 1.1.0
-Release  : 38
+Release  : 39
 URL      : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz
 Source99 : http://tarballs.openstack.org/hacking/hacking-1.1.0.tar.gz.asc
