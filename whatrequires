@@ -3,5 +3,4 @@ ironic
 oslo.privsep
 python-swiftclient
 python-troveclient
-stestr
 tempest
