@@ -1,8 +1,13 @@
-1.1.0
+3.0.1
+coverage-python
 eventlet
 eventlet-python
-reno-python
-testrepository
-testrepository-python
+python-mock
+python-mock-python
+python-subunit
+python-subunit-python
+stestr
+stestr-python
+testscenarios
 testtools
 testtools-python

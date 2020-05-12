@@ -1,18 +1,15 @@
---- hacking-1.1.0/requirements.txt~	2018-05-08 13:17:08.000000000 +0000
-+++ hacking-1.1.0/requirements.txt	2018-07-24 17:14:26.270140546 +0000
-@@ -3,5 +3,5 @@
- # process, which may cause wedges in the gate later.
- pbr!=2.1.0,>=2.0.0 # Apache-2.0
- 
--flake8<2.7.0,>=2.6.0 # MIT
+diff -ru hacking-3.0.1~/hacking.egg-info/requires.txt hacking-3.0.1/hacking.egg-info/requires.txt
+--- hacking-3.0.1~/hacking.egg-info/requires.txt	2020-05-12 07:42:14.000000000 -0700
++++ hacking-3.0.1/hacking.egg-info/requires.txt	2020-05-12 12:42:44.353972728 -0700
+@@ -1,4 +1,4 @@
+-flake8<3.8.0,>=3.6.0
 +flake8
- six>=1.10.0 # MIT
---- hacking-1.1.0/hacking.egg-info/requires.txt~	2018-05-08 13:20:44.000000000 +0000
-+++ hacking-1.1.0/hacking.egg-info/requires.txt	2018-07-24 17:14:40.379140350 +0000
-@@ -1,5 +1,5 @@
- pbr!=2.1.0,>=2.0.0
--flake8<2.7.0,>=2.6.0
-+flake8
- six>=1.10.0
  
  [pep257]
+ flake8-docstrings==0.2.1.post1
+diff -ru hacking-3.0.1~/requirements.txt hacking-3.0.1/requirements.txt
+--- hacking-3.0.1~/requirements.txt	2020-05-12 07:41:27.000000000 -0700
++++ hacking-3.0.1/requirements.txt	2020-05-12 12:42:22.252114522 -0700
+@@ -1 +1 @@
+-flake8<3.8.0,>=3.6.0 # MIT
++flake8
