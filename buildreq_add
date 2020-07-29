@@ -1,2 +1,14 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
+coverage-python
+eventlet
+eventlet-python
+python-mock
+python-mock-python
+python-subunit
+python-subunit-python
+stestr
+stestr-python
+testscenarios
+testtools
+testtools-python
