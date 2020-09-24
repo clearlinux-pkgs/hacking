@@ -6,7 +6,7 @@
 #
 Name     : hacking
 Version  : 3.2.0
-Release  : 49
+Release  : 50
 URL      : http://tarballs.openstack.org/hacking/hacking-3.2.0.tar.gz
 Source0  : http://tarballs.openstack.org/hacking/hacking-3.2.0.tar.gz
 Source1  : http://tarballs.openstack.org/hacking/hacking-3.2.0.tar.gz.asc
